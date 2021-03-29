@@ -46,7 +46,7 @@ namespace Colaboradix.Infra.Data.Common
             return _session.Connection.ExecuteAsync(sql, param, _session.Transaction);
         }
 
-        protected Task ExecuteScalarAsync<T>(string sql, object param = null)
+        protected Task<T> ExecuteScalarAsync<T>(string sql, object param = null)
         {
             return _session.Connection.ExecuteScalarAsync<T>(sql, param, _session.Transaction);
         }

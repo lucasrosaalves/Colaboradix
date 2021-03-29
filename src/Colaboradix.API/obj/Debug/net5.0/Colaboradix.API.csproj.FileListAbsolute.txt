@@ -37,3 +37,4 @@ C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.API\bin\Debug\net5.0\Colaboradix
 C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.API\bin\Debug\net5.0\Colaboradix.Domain.pdb
 C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.API\bin\Debug\net5.0\Dapper.dll
 C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.API\bin\Debug\net5.0\Npgsql.dll
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.API\bin\Debug\net5.0\FluentValidation.dll

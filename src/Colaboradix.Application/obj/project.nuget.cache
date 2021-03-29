@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DUj2FVK10LRYgXnMB9pQxp+3ILwxIAGR+ZC69iYNpTWCM1UAaYLTmc7DsC+iuYsLMw/81hNultdxR4AFSQrUDA==",
+  "dgSpecHash": "bXsi7mH8qyQ0t6T8QllaJ/ye3y0vfzAmifyFzUvr05qo66qt1WuYqTvB08NJSHXUyBtVlC0D8T2tonfPOAGFcw==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lucas.alves\\.nuget\\packages\\fluentvalidation\\9.5.3\\fluentvalidation.9.5.3.nupkg.sha512",
     "C:\\Users\\lucas.alves\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\lucas.alves\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\lucas.alves\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -19,7 +20,7 @@ namespace Colaboradix.API.CustomMiddleware
             {
                 await _next.Invoke(context);
             }
-            catch
+            catch(Exception ex)
             {
                 await HandleExceptionAsync(context);
             }
@@ -28,7 +29,6 @@ namespace Colaboradix.API.CustomMiddleware
         private static async Task HandleExceptionAsync(HttpContext context)
         {
             var response = context.Response;
-            response.ContentType = "application/json";
             response.StatusCode = (int)HttpStatusCode.InternalServerError;
             var message = "Unexpected error ocurred. Contact the system's adminstrator";
 

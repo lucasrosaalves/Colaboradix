@@ -2,7 +2,7 @@
 
 namespace Colaboradix.Application.Common.UseCases
 {
-    public interface IQueryService<TResponse> : IRequestHandler<IQuery<TResponse>, TResponse>
+    public interface IQueryService<TRequest, TResponse> : IRequestHandler<TRequest, TResponse> where TRequest : IQuery<TResponse>
     {
     }
 }

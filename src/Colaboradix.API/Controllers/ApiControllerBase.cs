@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Colaboradix.API.Controllers
@@ -14,7 +15,7 @@ namespace Colaboradix.API.Controllers
         protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetService<ISender>();
 
 
-        protected async Task<IActionResult> QueryAsync<T>(IQuery<T> query)
+        protected async Task<IActionResult> QueryAsync<T>(IQuery<T> query, CancellationToken cancellationToken = default)
         {
             if(query is null) { return BadRequest(); }
 
@@ -25,10 +26,10 @@ namespace Colaboradix.API.Controllers
                 return BadRequest(validation.Errors);
             }
 
-            return Ok(await Mediator.Send(query));
+            return Ok(await Mediator.Send(query, cancellationToken));
         }
 
-        protected async Task<IActionResult> CommandAsync(ICommand command)
+        protected async Task<IActionResult> CommandAsync(ICommand command, CancellationToken cancellationToken = default)
         {
             if (command is null) { return BadRequest(); }
 
@@ -39,7 +40,7 @@ namespace Colaboradix.API.Controllers
                 return BadRequest(validation.Errors);
             }
 
-            var result = await Mediator.Send(command);
+            var result = await Mediator.Send(command, cancellationToken);
 
             if (!result.Succeeded)
             {

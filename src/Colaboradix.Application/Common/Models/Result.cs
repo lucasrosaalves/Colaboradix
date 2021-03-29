@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using FluentValidation.Results;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Colaboradix.Application.Common.Models
@@ -29,5 +30,16 @@ namespace Colaboradix.Application.Common.Models
         {
             return new Result(false, new[] { error });
         }
+
+        public static Result FromValidationResult(ValidationResult validationResult)
+        {
+            if (validationResult.IsValid)
+            {
+                return Success();
+            }
+
+            return Failure(validationResult.Errors.Select(e => e.ErrorMessage).Distinct());
+        }
+
     }
 }

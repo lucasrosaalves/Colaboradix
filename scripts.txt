@@ -1,0 +1,11 @@
+create table "user" (
+  "user_id" uuid not null,
+  "name" varchar(50),
+  "email" varchar(255),
+  "password" varchar(255),
+  "type" bit not null,
+  "project_id" uuid,
+  "team_id" uuid,
+  "active" boolean not null,
+  constraint user_pk primary key (user_id)
+);

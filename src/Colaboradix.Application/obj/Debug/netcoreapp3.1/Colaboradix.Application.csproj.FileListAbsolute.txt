@@ -1,0 +1,9 @@
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\bin\Debug\netcoreapp3.1\Colaboradix.Application.deps.json
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\bin\Debug\netcoreapp3.1\Colaboradix.Application.dll
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\bin\Debug\netcoreapp3.1\Colaboradix.Application.pdb
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\obj\Debug\netcoreapp3.1\Colaboradix.Application.csprojAssemblyReference.cache
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\obj\Debug\netcoreapp3.1\Colaboradix.Application.AssemblyInfoInputs.cache
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\obj\Debug\netcoreapp3.1\Colaboradix.Application.AssemblyInfo.cs
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\obj\Debug\netcoreapp3.1\Colaboradix.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\obj\Debug\netcoreapp3.1\Colaboradix.Application.dll
+C:\Projetos\Pessoal\Colaboradix\src\Colaboradix.Application\obj\Debug\netcoreapp3.1\Colaboradix.Application.pdb

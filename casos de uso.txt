@@ -1,0 +1,24 @@
+Usuarios
+
+Usuario divididos por equipes 
+
+Administrador que é capaz de separar os usuario por equipes 
+
+
+O administrador é capaz de definir o inicio e o fim de um ciclo
+
+
+em cada ciclo, cada usuario de uma determinado equipe, tem 10 estrelas para dividir entre os membros da equipe, e adicionar comenários em cada avaliação.
+
+O usuario não pode se auto avaliar. 
+
+E o usuario não pode dar mais de 3 estrelas para um unico usuario. 
+
+
+Cada usuario é obrigado a dar pelo menos 5 estrelas.
+
+
+Ao fim de cada ciclo, é gerado um ranking com o top 3 das avaliação.
+
+Além disso, também é informado os usuarios que não deram estrelas, para que haja uma zoação e a pessoa nunca mais pense em não avaliar.
+

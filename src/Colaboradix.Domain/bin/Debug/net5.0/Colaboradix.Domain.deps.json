@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Colaboradix.Domain/1.0.0": {
+        "runtime": {
+          "Colaboradix.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Colaboradix.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

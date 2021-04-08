@@ -7,5 +7,6 @@ namespace Colaboradix.Domain.Repositories
     public interface ITeamRepository : IRepository<Team>
     {
         public Task AddAsync(Team team);
+        public bool ExistsByName(string name);
     }
 }

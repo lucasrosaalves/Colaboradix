@@ -34,7 +34,7 @@
       "Colaboradix.API/1.0.0": {
         "dependencies": {
           "Colaboradix.Application": "1.0.0",
-          "Colaboradix.Infra.Data": "1.0.0",
+          "Colaboradix.Infra": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.5",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -335,6 +335,22 @@
         },
         "compile": {
           "lib/net5.0/Dapper.dll": {}
+        }
+      },
+      "EFCore.NamingConventions/5.0.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.5",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.5",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/EFCore.NamingConventions.dll": {
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/EFCore.NamingConventions.dll": {}
         }
       },
       "FluentValidation/10.0.0": {
@@ -638,7 +654,6 @@
       "Colaboradix.Application/1.0.0": {
         "dependencies": {
           "Colaboradix.Domain": "1.0.0",
-          "Dapper": "2.0.78",
           "FluentValidation": "10.0.0",
           "FluentValidation.DependencyInjectionExtensions": "10.0.0",
           "MediatR": "9.0.0",
@@ -660,9 +675,11 @@
           "Colaboradix.Domain.dll": {}
         }
       },
-      "Colaboradix.Infra.Data/1.0.0": {
+      "Colaboradix.Infra/1.0.0": {
         "dependencies": {
           "Colaboradix.Domain": "1.0.0",
+          "Dapper": "2.0.78",
+          "EFCore.NamingConventions": "5.0.2",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.5",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
@@ -671,10 +688,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.2"
         },
         "runtime": {
-          "Colaboradix.Infra.Data.dll": {}
+          "Colaboradix.Infra.dll": {}
         },
         "compile": {
-          "Colaboradix.Infra.Data.dll": {}
+          "Colaboradix.Infra.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -2378,6 +2395,13 @@
       "path": "dapper/2.0.78",
       "hashPath": "dapper.2.0.78.nupkg.sha512"
     },
+    "EFCore.NamingConventions/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5MQ2lU2cplHcjQzIeRY4NSVn7ix6pzzjEboCaRsBjavUb3HZNI96a3u1dApE/LKkPLyNJUR6s2HquX2N1qsh0Q==",
+      "path": "efcore.namingconventions/5.0.2",
+      "hashPath": "efcore.namingconventions.5.0.2.nupkg.sha512"
+    },
     "FluentValidation/10.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2619,7 +2643,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Colaboradix.Infra.Data/1.0.0": {
+    "Colaboradix.Infra/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

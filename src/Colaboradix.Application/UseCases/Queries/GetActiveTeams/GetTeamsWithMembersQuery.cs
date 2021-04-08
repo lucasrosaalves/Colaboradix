@@ -3,5 +3,5 @@ using Colaboradix.Application.Common.UseCases;
 
 namespace Colaboradix.Application.UseCases.Queries.GetActiveTeams
 {
-    public record GetActiveTeamsQuery : IQuery<IEnumerable<ActiveTeamsDto>>;
+    public record GetTeamsWithMembersQuery : IQuery<IEnumerable<TeamWithMembersDto>>;
 }

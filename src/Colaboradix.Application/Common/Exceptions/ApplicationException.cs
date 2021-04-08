@@ -1,27 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using Colaboradix.Application.Common.Constants;
+using Colaboradix.Application.Common.Models;
 using FluentValidation.Results;
 
 namespace Colaboradix.Application.Common.Exceptions
 {
-    public class ValidationException : Exception
+    public class ApplicationException : Exception
     {
-        public ValidationException() : base(ApplicationErrors.ValidationFailures)
+        public ApplicationException() : base(ApplicationErrors.ValidationFailures)
         {
-            Errors = new List<string>();
         }
 
-        public ValidationException(IEnumerable<ValidationFailure> failures) : this()
+        public ApplicationException(IEnumerable<ValidationFailure> failures) : this()
         {
-            if(failures is null) { return; }
-
-            foreach(var failure in failures)
-            {
-                Errors.Add(failure.ErrorMessage);
-            }
+            ApplicationResponse = ApplicationResponse.FromValidationFailures(failures);
         }
 
-        public IList<string> Errors { get; } = new List<string>();
+        public ApplicationResponse ApplicationResponse { get; }
     }
 }

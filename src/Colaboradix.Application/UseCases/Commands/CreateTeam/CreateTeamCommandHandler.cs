@@ -20,15 +20,20 @@ namespace Colaboradix.Application.UseCases.Commands.CreateTeam
             _teamRepository = teamRepository ?? throw new ArgumentNullException(nameof(teamRepository));
         }
 
-        public async Task<Result> Handle(CreateTeamCommand request, CancellationToken cancellationToken)
+        public async Task<ApplicationResponse> Handle(CreateTeamCommand request, CancellationToken cancellationToken)
         {
+            if (_teamRepository.ExistsByName(request.Name))
+            {
+                return ApplicationResponse.Failure("This name is already in use");
+            }
+
             var team = new Team(request.Name, request.Description);
 
             await _teamRepository.AddAsync(team);
 
             await _unitOfWork.CommitAsync();
 
-            return Result.Success();
+            return ApplicationResponse.Success();
         }
     }
 }

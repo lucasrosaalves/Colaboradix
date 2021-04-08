@@ -14,10 +14,10 @@ namespace Colaboradix.API.Controllers
             return await CommandAsync(command, cancellationToken);
         }
 
-        [HttpGet("Actives")]
-        public async Task<IActionResult> GetActiveTeams(CancellationToken cancellationToken)
+        [HttpGet("GetAllWithMembers")]
+        public async Task<IActionResult> Get(CancellationToken cancellationToken)
         {
-            return await QueryAsync(new GetActiveTeamsQuery(), cancellationToken);
+            return await QueryAsync(new GetTeamsWithMembersQuery(), cancellationToken);
         }
     }
 }

@@ -17,7 +17,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -32,8 +32,8 @@
               "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj": {
                 "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj"
               },
-              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj": {
-                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj"
+              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj": {
+                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj"
               }
             }
           }
@@ -94,7 +94,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -122,10 +122,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.78, )"
-            },
             "FluentValidation": {
               "target": "Package",
               "version": "[10.0.0, )"
@@ -179,7 +175,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -221,20 +217,20 @@
         }
       }
     },
-    "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj": {
+    "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj",
-        "projectName": "Colaboradix.Infra.Data",
-        "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj",
+        "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj",
+        "projectName": "Colaboradix.Infra",
+        "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj",
         "packagesPath": "/Users/lucasrosaalves/.nuget/packages/",
-        "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/obj/",
+        "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -262,6 +258,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.5, )"

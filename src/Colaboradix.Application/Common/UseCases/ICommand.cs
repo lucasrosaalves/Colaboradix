@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Colaboradix.Application.Common.UseCases
 {
-    public interface ICommand : IRequest<Result>
+    public interface ICommand : IRequest<ApplicationResponse>
     {
     }
 }

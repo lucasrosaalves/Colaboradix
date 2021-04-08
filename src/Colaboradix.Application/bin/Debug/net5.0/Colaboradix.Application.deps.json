@@ -9,7 +9,6 @@
       "Colaboradix.Application/1.0.0": {
         "dependencies": {
           "Colaboradix.Domain": "1.0.0",
-          "Dapper": "2.0.78",
           "FluentValidation": "10.0.0",
           "FluentValidation.DependencyInjectionExtensions": "10.0.0",
           "MediatR": "9.0.0",
@@ -18,14 +17,6 @@
         },
         "runtime": {
           "Colaboradix.Application.dll": {}
-        }
-      },
-      "Dapper/2.0.78": {
-        "runtime": {
-          "lib/net5.0/Dapper.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.78.45418"
-          }
         }
       },
       "FluentValidation/10.0.0": {
@@ -88,13 +79,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "Dapper/2.0.78": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vLPwL2HZXp/DN17Eu7sg6GMEj02alq7jcy6atn5Gv8i96b9Hu1UoxlCrhInUPfSFLQQiD8O7pdWAE1fdUEO/1Q==",
-      "path": "dapper/2.0.78",
-      "hashPath": "dapper.2.0.78.nupkg.sha512"
     },
     "FluentValidation/10.0.0": {
       "type": "package",

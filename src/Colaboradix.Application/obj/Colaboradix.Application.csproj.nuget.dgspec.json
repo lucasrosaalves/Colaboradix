@@ -17,7 +17,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -45,10 +45,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.78, )"
-            },
             "FluentValidation": {
               "target": "Package",
               "version": "[10.0.0, )"
@@ -102,7 +98,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

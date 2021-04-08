@@ -1,30 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Colaboradix.Application.Common.UseCases;
-using Dapper;
 
 namespace Colaboradix.Application.UseCases.Queries.GetActiveTeams
 {
-    public class GetActiveTeamsQueryHandler : IQueryHandler<GetActiveTeamsQuery, IEnumerable<ActiveTeamsDto>>
+    public class GetTeamsWithMembersQueryHandler : IQueryHandler<GetTeamsWithMembersQuery, IEnumerable<TeamWithMembersDto>>
     {
-        private readonly ISqlConnectionFactory _sqlConnectionFactory;
+        private readonly ISqlQueryService _queryService;
 
-        public GetActiveTeamsQueryHandler(ISqlConnectionFactory sqlConnectionFactory)
+        public GetTeamsWithMembersQueryHandler(ISqlQueryService queryService)
         {
-            _sqlConnectionFactory = sqlConnectionFactory ?? throw new ArgumentNullException(nameof(sqlConnectionFactory));
+            _queryService = queryService ?? throw new ArgumentNullException(nameof(queryService));
         }
 
-        public async Task<IEnumerable<ActiveTeamsDto>> Handle(GetActiveTeamsQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<TeamWithMembersDto>> Handle(GetTeamsWithMembersQuery request, CancellationToken cancellationToken)
         {
-            var connection = _sqlConnectionFactory.GetOpenConnection();
 
-            return await connection.QueryAsync<ActiveTeamsDto>(@"
-                SELECT id, name, description
-                    FROM Teams
-                WHERE Active = true");
+            string query = @"
+                    SELECT
+                        *
+                    FROM Teams t
+                      LEFT JOIN Members m ON
+                        m.team_id = t.id  ";
+
+            var teamsDictionary = new Dictionary<Guid, TeamWithMembersDto>();
+
+            return await _queryService.QueryAsync<TeamWithMembersDto, TeamWithMembersDto.MemberDto, TeamWithMembersDto>(
+                    query, (team, member) =>
+                    {
+
+                        if (!teamsDictionary.TryGetValue(team.Id, out var teamsEntry))
+                        {
+                            teamsEntry = team;
+                            teamsEntry.Members = new List<TeamWithMembersDto.MemberDto>();
+                            teamsDictionary.Add(teamsEntry.Id, teamsEntry);
+                        }
+
+                        teamsEntry.Members.Add(member);
+                        return teamsEntry;
+                    });
         }
 
     }

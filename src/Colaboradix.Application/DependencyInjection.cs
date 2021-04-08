@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Colaboradix.Application.IoC
+namespace Colaboradix.Application
 {
     public static class DependencyInjection
     {

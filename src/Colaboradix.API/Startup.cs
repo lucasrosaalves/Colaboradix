@@ -1,6 +1,6 @@
 using Colaboradix.API.Middlewares;
-using Colaboradix.Application.IoC;
-using Colaboradix.Infra.Data.IoC;
+using Colaboradix.Application;
+using Colaboradix.Infra.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

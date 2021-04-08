@@ -3,7 +3,7 @@ using Colaboradix.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Data.Configurations.EntityTypes
+namespace Colaboradix.Infra.Data.Configurations
 {
     internal class FeedbackEntityTypeConfiguration : IEntityTypeConfiguration<Feedback>
     {

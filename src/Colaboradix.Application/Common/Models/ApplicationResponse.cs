@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Colaboradix.Application.Common.Models
 {
-    public class Result
+    public class ApplicationResponse
     {
-        internal Result(bool succeeded, IEnumerable<string> errors)
+        internal ApplicationResponse(bool succeeded, IEnumerable<string> errors)
         {
             Succeeded = succeeded;
             Errors = errors.ToArray();
@@ -16,22 +16,22 @@ namespace Colaboradix.Application.Common.Models
 
         public string[] Errors { get; set; }
 
-        public static Result Success()
+        public static ApplicationResponse Success()
         {
-            return new Result(true, new string[] { });
+            return new ApplicationResponse(true, new string[] { });
         }
 
-        public static Result Failure(IEnumerable<string> errors)
+        public static ApplicationResponse Failure(IEnumerable<string> errors)
         {
-            return new Result(false, errors);
+            return new ApplicationResponse(false, errors);
         }
 
-        public static Result Failure(string error)
+        public static ApplicationResponse Failure(string error)
         {
-            return new Result(false, new[] { error });
+            return new ApplicationResponse(false, new[] { error });
         }
 
-        public static Result FromValidationResult(ValidationResult validationResult)
+        public static ApplicationResponse FromValidationResult(ValidationResult validationResult)
         {
             if (validationResult.IsValid)
             {
@@ -41,5 +41,14 @@ namespace Colaboradix.Application.Common.Models
             return Failure(validationResult.Errors.Select(e => e.ErrorMessage).Distinct());
         }
 
+        public static ApplicationResponse FromValidationFailures(IEnumerable<ValidationFailure> validationFailures)
+        {
+            if (validationFailures is null || !validationFailures.Any())
+            {
+                return Success();
+            }
+
+            return Failure(validationFailures.Select(e => e.ErrorMessage).Distinct());
+        }
     }
 }

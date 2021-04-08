@@ -11,6 +11,20 @@
           "lib/net5.0/Dapper.dll": {}
         }
       },
+      "EFCore.NamingConventions/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/EFCore.NamingConventions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/EFCore.NamingConventions.dll": {}
+        }
+      },
       "FluentValidation/10.0.0": {
         "type": "package",
         "compile": {
@@ -401,7 +415,6 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Colaboradix.Domain": "1.0.0",
-          "Dapper": "2.0.78",
           "FluentValidation": "10.0.0",
           "FluentValidation.DependencyInjectionExtensions": "10.0.0",
           "MediatR": "9.0.0",
@@ -425,11 +438,13 @@
           "bin/placeholder/Colaboradix.Domain.dll": {}
         }
       },
-      "Colaboradix.Infra.Data/1.0.0": {
+      "Colaboradix.Infra/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Colaboradix.Domain": "1.0.0",
+          "Dapper": "2.0.78",
+          "EFCore.NamingConventions": "5.0.2",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.5",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
@@ -438,10 +453,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.2"
         },
         "compile": {
-          "bin/placeholder/Colaboradix.Infra.Data.dll": {}
+          "bin/placeholder/Colaboradix.Infra.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Colaboradix.Infra.Data.dll": {}
+          "bin/placeholder/Colaboradix.Infra.dll": {}
         }
       }
     }
@@ -462,6 +477,18 @@
         "lib/net5.0/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "EFCore.NamingConventions/5.0.2": {
+      "sha512": "5MQ2lU2cplHcjQzIeRY4NSVn7ix6pzzjEboCaRsBjavUb3HZNI96a3u1dApE/LKkPLyNJUR6s2HquX2N1qsh0Q==",
+      "type": "package",
+      "path": "efcore.namingconventions/5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "efcore.namingconventions.5.0.2.nupkg.sha512",
+        "efcore.namingconventions.nuspec",
+        "lib/netstandard2.1/EFCore.NamingConventions.dll"
       ]
     },
     "FluentValidation/10.0.0": {
@@ -1208,16 +1235,16 @@
       "path": "../Colaboradix.Domain/Colaboradix.Domain.csproj",
       "msbuildProject": "../Colaboradix.Domain/Colaboradix.Domain.csproj"
     },
-    "Colaboradix.Infra.Data/1.0.0": {
+    "Colaboradix.Infra/1.0.0": {
       "type": "project",
-      "path": "../Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj",
-      "msbuildProject": "../Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj"
+      "path": "../Colaboradix.Infra/Colaboradix.Infra.csproj",
+      "msbuildProject": "../Colaboradix.Infra/Colaboradix.Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Colaboradix.Application >= 1.0.0",
-      "Colaboradix.Infra.Data >= 1.0.0",
+      "Colaboradix.Infra >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.5",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -1239,7 +1266,7 @@
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
+        "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1254,8 +1281,8 @@
             "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj": {
               "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj"
             },
-            "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj": {
-              "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj"
+            "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj": {
+              "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj"
             }
           }
         }

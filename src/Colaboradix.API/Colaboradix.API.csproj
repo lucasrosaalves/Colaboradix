@@ -14,7 +14,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Colaboradix.Application\Colaboradix.Application.csproj" />
-    <ProjectReference Include="..\Colaboradix.Infra.Data\Colaboradix.Infra.Data.csproj" />
+    <ProjectReference Include="..\Colaboradix.Infra\Colaboradix.Infra.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,6 @@
-﻿using System;
+﻿using Colaboradix.Application.Common.UseCases;
+
 namespace Colaboradix.Application.UseCases.Commands.CreateTeam
 {
-    public class CreateTeamCommand
-    {
-        public CreateTeamCommand()
-        {
-        }
-    }
+    public record CreateTeamCommand(string Name, string Description) : ICommand;
 }

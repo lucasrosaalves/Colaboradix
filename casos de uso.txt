@@ -22,3 +22,22 @@ Ao fim de cada ciclo, é gerado um ranking com o top 3 das avaliação.
 
 Além disso, também é informado os usuarios que não deram estrelas, para que haja uma zoação e a pessoa nunca mais pense em não avaliar.
 
+
+
+-- ef
+dotnet ef --startup-project ../Colaboradix.API/ migrations add InitialModel --verbose
+dotnet ef --startup-project ../Colaboradix.API/ database update --verbose
+
+
+
+-- postgres 
+
+docker volume create postgres_db
+
+docker run \
+  --name postgres \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -v postgres_db:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  -d postgres

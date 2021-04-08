@@ -3,13 +3,13 @@ using Colaboradix.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Data.Common.Configurations.EntityTypes
+namespace Colaboradix.Infra.Data.Configurations.EntityTypes
 {
     internal class FeedbackEntityTypeConfiguration : IEntityTypeConfiguration<Feedback>
     {
         public void Configure(EntityTypeBuilder<Feedback> builder)
         {
-            builder.ToTable("Feedbacks");
+            builder.ToTable("feedbacks");
 
             builder.HasKey(b => b.Id);
 

@@ -2,13 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Data.Common.Configurations.EntityTypes
+namespace Colaboradix.Infra.Data.Configurations.EntityTypes
 {
     internal class TeamEntityTypeConfiguration : IEntityTypeConfiguration<Team>
     {
         public void Configure(EntityTypeBuilder<Team> builder)
         {
-            builder.ToTable("Teams");
+            builder.ToTable("teams");
 
             builder.HasKey(b => b.Id);
 

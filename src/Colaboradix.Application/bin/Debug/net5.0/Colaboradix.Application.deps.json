@@ -9,7 +9,9 @@
       "Colaboradix.Application/1.0.0": {
         "dependencies": {
           "Colaboradix.Domain": "1.0.0",
-          "FluentValidation": "9.5.3",
+          "Dapper": "2.0.78",
+          "FluentValidation": "10.0.0",
+          "FluentValidation.DependencyInjectionExtensions": "10.0.0",
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
@@ -18,11 +20,31 @@
           "Colaboradix.Application.dll": {}
         }
       },
-      "FluentValidation/9.5.3": {
+      "Dapper/2.0.78": {
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.78.45418"
+          }
+        }
+      },
+      "FluentValidation/10.0.0": {
         "runtime": {
           "lib/net5.0/FluentValidation.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.5.3.0"
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/10.0.0": {
+        "dependencies": {
+          "FluentValidation": "10.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "10.0.0.0"
           }
         }
       },
@@ -67,12 +89,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "FluentValidation/9.5.3": {
+    "Dapper/2.0.78": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BataCga/cwQUeo9yy8dzDnihx3N5l1+wj6kEQOkdQ5FIsSFcWD/UjdPJ2jNKODSPAtYuDH5KLM5IBrr1UCNf/A==",
-      "path": "fluentvalidation/9.5.3",
-      "hashPath": "fluentvalidation.9.5.3.nupkg.sha512"
+      "sha512": "sha512-vLPwL2HZXp/DN17Eu7sg6GMEj02alq7jcy6atn5Gv8i96b9Hu1UoxlCrhInUPfSFLQQiD8O7pdWAE1fdUEO/1Q==",
+      "path": "dapper/2.0.78",
+      "hashPath": "dapper.2.0.78.nupkg.sha512"
+    },
+    "FluentValidation/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jNFPbLjBy/bfIWx4BV/WVEsS+1OxBVf22mmSdvVa9RCHJDkNhAjbKZkxgA0s1rYNFxVn+a1fQbos95t4j/z3Zg==",
+      "path": "fluentvalidation/10.0.0",
+      "hashPath": "fluentvalidation.10.0.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J/6dnwbf+mL34SiDYl9udH3z6gduYuhENW6a2EY9LYJKqk7JDysaKpWAzDz3wULpm3zBM98PxWmk5stoqc7p2A==",
+      "path": "fluentvalidation.dependencyinjectionextensions/10.0.0",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.10.0.0.nupkg.sha512"
     },
     "MediatR/9.0.0": {
       "type": "package",

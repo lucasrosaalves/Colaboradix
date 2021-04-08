@@ -3,13 +3,13 @@ using Colaboradix.Domain.Enumerations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Data.Common.Configurations.EntityTypes
+namespace Colaboradix.Infra.Data.Configurations.EntityTypes
 {
     internal class MemberEntityTypeConfiguration : IEntityTypeConfiguration<Member>
     {
         public void Configure(EntityTypeBuilder<Member> builder)
         {
-            builder.ToTable("Members");
+            builder.ToTable("members");
 
             builder.HasKey(b => b.Id);
 

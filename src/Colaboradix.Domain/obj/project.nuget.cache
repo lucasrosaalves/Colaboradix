@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SJvwC6ZqPTfwDwCDo/osB/f4ePMEv5EgdP+Fk1LcjpHN6XFVDo3URWvmxKRyDBuQrJlIyN1oGaoZpsLMLwWmlw==",
+  "dgSpecHash": "s/TZ52DXvTJ/R41u10nSqCOH7J1cSVadkuEgjUSE73s2t9YtwBNKQxRrYOzVjXE22h998Dl/p8frYxDWYtqwpA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj",
+  "projectFilePath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

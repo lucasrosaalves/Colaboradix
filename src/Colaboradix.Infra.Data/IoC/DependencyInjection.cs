@@ -1,25 +1,40 @@
 ﻿using Colaboradix.Domain.Common;
 using Colaboradix.Domain.Repositories;
 using Colaboradix.Infra.Data.Context;
+using Colaboradix.Infra.Data.Factories;
 using Colaboradix.Infra.Data.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Colaboradix.Infra.Data.IoC
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddDataServices(this IServiceCollection services)
+        public static IServiceCollection AddDataServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddContext();
+            string connectionString = configuration.GetConnectionString("ColaboradixDb");
 
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseNpgsql(connectionString);
+            });
+
+            services.AddScoped<ISqlConnectionFactory, SqlConnectionFactory>(s =>
+            {
+                return new SqlConnectionFactory(connectionString);
+            });
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddRepositories();
+
             return services;
         }
 
-        private static IServiceCollection AddContext(this IServiceCollection services)
+        private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            services.AddScoped<DbSession>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ITeamRepository, TeamRepository>();
 
             return services;
         }

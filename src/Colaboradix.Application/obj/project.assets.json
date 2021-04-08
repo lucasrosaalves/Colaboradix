@@ -2,13 +2,35 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "FluentValidation/9.5.3": {
+      "Dapper/2.0.78": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {}
+        }
+      },
+      "FluentValidation/10.0.0": {
         "type": "package",
         "compile": {
           "lib/net5.0/FluentValidation.dll": {}
         },
         "runtime": {
           "lib/net5.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "10.0.0",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
       "MediatR/9.0.0": {
@@ -55,22 +77,55 @@
     }
   },
   "libraries": {
-    "FluentValidation/9.5.3": {
-      "sha512": "BataCga/cwQUeo9yy8dzDnihx3N5l1+wj6kEQOkdQ5FIsSFcWD/UjdPJ2jNKODSPAtYuDH5KLM5IBrr1UCNf/A==",
+    "Dapper/2.0.78": {
+      "sha512": "vLPwL2HZXp/DN17Eu7sg6GMEj02alq7jcy6atn5Gv8i96b9Hu1UoxlCrhInUPfSFLQQiD8O7pdWAE1fdUEO/1Q==",
       "type": "package",
-      "path": "fluentvalidation/9.5.3",
+      "path": "dapper/2.0.78",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.2.0.78.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "FluentValidation/10.0.0": {
+      "sha512": "jNFPbLjBy/bfIWx4BV/WVEsS+1OxBVf22mmSdvVa9RCHJDkNhAjbKZkxgA0s1rYNFxVn+a1fQbos95t4j/z3Zg==",
+      "type": "package",
+      "path": "fluentvalidation/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "fluent-validation-icon.png",
-        "fluentvalidation.9.5.3.nupkg.sha512",
+        "fluentvalidation.10.0.0.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net461/FluentValidation.dll",
-        "lib/net461/FluentValidation.xml",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml"
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/10.0.0": {
+      "sha512": "J/6dnwbf+mL34SiDYl9udH3z6gduYuhENW6a2EY9LYJKqk7JDysaKpWAzDz3wULpm3zBM98PxWmk5stoqc7p2A==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.10.0.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
     "MediatR/9.0.0": {
@@ -133,48 +188,45 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Colaboradix.Domain >= 1.0.0",
-      "FluentValidation >= 9.5.3",
+      "Dapper >= 2.0.78",
+      "FluentValidation >= 10.0.0",
+      "FluentValidation.DependencyInjectionExtensions >= 10.0.0",
       "MediatR >= 9.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 9.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 5.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucas.alves\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/lucasrosaalves/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj",
+      "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj",
       "projectName": "Colaboradix.Application",
-      "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj",
-      "packagesPath": "C:\\Users\\lucas.alves\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\obj\\",
+      "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj",
+      "packagesPath": "/Users/lucasrosaalves/.nuget/packages/",
+      "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lucas.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Projetos\\Pacotes Nuget": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/ChampionX-DevOps/518a001c-1638-42ea-bfd5-3945fd007a0e/_packaging/digital-solutions/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/ChampionX-DevOps/_packaging/ChampionX-DevOps%40Local/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj": {
-              "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj"
+            "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj": {
+              "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj"
             }
           }
         }
@@ -189,9 +241,17 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.0.78, )"
+          },
           "FluentValidation": {
             "target": "Package",
-            "version": "[9.5.3, )"
+            "version": "[10.0.0, )"
+          },
+          "FluentValidation.DependencyInjectionExtensions": {
+            "target": "Package",
+            "version": "[10.0.0, )"
           },
           "MediatR": {
             "target": "Package",
@@ -221,7 +281,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -5,6 +5,5 @@ namespace Colaboradix.Application.Common.UseCases
 {
     public interface ICommand : IRequest<Result>
     {
-        public Result IsValid();
     }
 }

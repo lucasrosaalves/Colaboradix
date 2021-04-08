@@ -1,17 +1,34 @@
-﻿namespace Colaboradix.Domain.Enumerations
-{
-    public class UserType
-    {
-        public static UserType Admin = new UserType(1, "Admin");
-        public static UserType Regular = new UserType(2, "Regular");
+﻿using System;
 
-        public UserType(int id, string name)
+namespace Colaboradix.Domain.Enumerations
+{
+    public class MemberType
+    {
+        public static MemberType Admin = new MemberType(1, "Admin");
+        public static MemberType Regular = new MemberType(2, "Regular");
+
+        public MemberType(byte id, string name)
         {
             Id = id;
             Name = name;
         }
 
-        public int Id { get; }
+        protected MemberType() { }
+
+
+        public static MemberType FromId(byte id)
+        {
+            switch (id)
+            {
+                case 1:
+                    return Admin;
+                case 2:
+                    return Regular;
+            }
+            throw new ArgumentException($"Could not create a member type with id {id}");
+        }
+
+        public byte Id { get; }
         public string Name { get; }
     }
 }

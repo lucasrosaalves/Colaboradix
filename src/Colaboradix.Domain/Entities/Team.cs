@@ -6,18 +6,30 @@ namespace Colaboradix.Domain.Entities
 {
     public class Team : IEntity
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        private List<Member> _members;
+        private List<Cycle> _cycles;
 
-        public Guid ProjectId { get; set; }
-        public Project Project { get; set; }
+        public Guid Id { get; private set; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public bool Active { get; private set; }
 
-        public Guid UserAdminId { get; set; }
-        public User UserAdmin { get; set; }
+        public IReadOnlyList<Member> Members => _members;
+        public IReadOnlyList<Cycle> Cycles => _cycles;
 
-        public IList<User> Users { get; set; }
 
-        public bool Active { get; set; }
+        public Team(string name, string description)
+        {
+            Id = Guid.NewGuid();
+            Name = name;
+            Description = description;
+            Active = true;
+            _members = new();
+            _cycles = new();
+        }
+
+        protected Team()
+        {
+        }
     }
 }

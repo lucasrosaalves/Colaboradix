@@ -1,4 +1,4 @@
-using Colaboradix.API.CustomMiddleware;
+using Colaboradix.API.Middlewares;
 using Colaboradix.Application.IoC;
 using Colaboradix.Infra.Data.IoC;
 using Microsoft.AspNetCore.Builder;
@@ -28,7 +28,7 @@ namespace Colaboradix.API
             });
 
             services.AddApplicationServices();
-            services.AddDataServices();
+            services.AddDataServices(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

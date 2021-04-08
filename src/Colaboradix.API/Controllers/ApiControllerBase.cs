@@ -15,16 +15,9 @@ namespace Colaboradix.API.Controllers
         protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetService<ISender>();
 
 
-        protected async Task<IActionResult> QueryAsync<T>(IQuery<T> query, CancellationToken cancellationToken = default)
+        protected async Task<ActionResult> QueryAsync<T>(IQuery<T> query, CancellationToken cancellationToken = default)
         {
             if(query is null) { return BadRequest(); }
-
-            var validation = query.IsValid();
-
-            if (!validation.Succeeded)
-            { 
-                return BadRequest(validation.Errors);
-            }
 
             return Ok(await Mediator.Send(query, cancellationToken));
         }
@@ -32,13 +25,6 @@ namespace Colaboradix.API.Controllers
         protected async Task<IActionResult> CommandAsync(ICommand command, CancellationToken cancellationToken = default)
         {
             if (command is null) { return BadRequest(); }
-
-            var validation = command.IsValid();
-
-            if (!validation.Succeeded)
-            {
-                return BadRequest(validation.Errors);
-            }
 
             var result = await Mediator.Send(command, cancellationToken);
 

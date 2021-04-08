@@ -5,14 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="9.5.3" />
+    <PackageReference Include="FluentValidation" Version="10.0.0" />
     <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.0.0" />
+    <PackageReference Include="Dapper" Version="2.0.78" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Colaboradix.Domain\Colaboradix.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Commands\CreateTeam\" />
+    <Folder Include="Common\Behaviours\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="UseCases\Queries\" />
+    <Folder Include="UseCases\Queries\GetActiveTeams\" />
+  </ItemGroup>
 </Project>

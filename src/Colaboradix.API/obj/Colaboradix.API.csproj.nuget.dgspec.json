@@ -1,44 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.API\\Colaboradix.API.csproj": {}
+    "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.API/Colaboradix.API.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.API\\Colaboradix.API.csproj": {
+    "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.API/Colaboradix.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.API\\Colaboradix.API.csproj",
+        "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.API/Colaboradix.API.csproj",
         "projectName": "Colaboradix.API",
-        "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.API\\Colaboradix.API.csproj",
-        "packagesPath": "C:\\Users\\lucas.alves\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.API\\obj\\",
+        "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.API/Colaboradix.API.csproj",
+        "packagesPath": "/Users/lucasrosaalves/.nuget/packages/",
+        "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lucas.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Projetos\\Pacotes Nuget": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/518a001c-1638-42ea-bfd5-3945fd007a0e/_packaging/digital-solutions/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/_packaging/ChampionX-DevOps%40Local/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj": {
-                "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj"
+              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj": {
+                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj"
               },
-              "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Infra.Data\\Colaboradix.Infra.Data.csproj": {
-                "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Infra.Data\\Colaboradix.Infra.Data.csproj"
+              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj": {
+                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj"
               }
             }
           }
@@ -53,6 +48,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -76,42 +77,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj": {
+    "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj",
+        "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj",
         "projectName": "Colaboradix.Application",
-        "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\Colaboradix.Application.csproj",
-        "packagesPath": "C:\\Users\\lucas.alves\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Application\\obj\\",
+        "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj",
+        "packagesPath": "/Users/lucasrosaalves/.nuget/packages/",
+        "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lucas.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Projetos\\Pacotes Nuget": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/518a001c-1638-42ea-bfd5-3945fd007a0e/_packaging/digital-solutions/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/_packaging/ChampionX-DevOps%40Local/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj"
+              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj": {
+                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj"
               }
             }
           }
@@ -126,9 +122,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
             "FluentValidation": {
               "target": "Package",
-              "version": "[9.5.3, )"
+              "version": "[10.0.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             },
             "MediatR": {
               "target": "Package",
@@ -158,35 +162,30 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj": {
+    "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj",
+        "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj",
         "projectName": "Colaboradix.Domain",
-        "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj",
-        "packagesPath": "C:\\Users\\lucas.alves\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\obj\\",
+        "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj",
+        "packagesPath": "/Users/lucasrosaalves/.nuget/packages/",
+        "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lucas.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Projetos\\Pacotes Nuget": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/518a001c-1638-42ea-bfd5-3945fd007a0e/_packaging/digital-solutions/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/_packaging/ChampionX-DevOps%40Local/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -218,42 +217,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Infra.Data\\Colaboradix.Infra.Data.csproj": {
+    "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Infra.Data\\Colaboradix.Infra.Data.csproj",
+        "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj",
         "projectName": "Colaboradix.Infra.Data",
-        "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Infra.Data\\Colaboradix.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\lucas.alves\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Infra.Data\\obj\\",
+        "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/Colaboradix.Infra.Data.csproj",
+        "packagesPath": "/Users/lucasrosaalves/.nuget/packages/",
+        "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra.Data/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lucas.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Projetos\\Pacotes Nuget": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/518a001c-1638-42ea-bfd5-3945fd007a0e/_packaging/digital-solutions/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/ChampionX-DevOps/_packaging/ChampionX-DevOps%40Local/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\src\\Colaboradix.Domain\\Colaboradix.Domain.csproj"
+              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj": {
+                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj"
               }
             }
           }
@@ -268,9 +262,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Dapper": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.0.78, )"
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.5, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -283,6 +281,10 @@
             "Npgsql": {
               "target": "Package",
               "version": "[5.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -300,7 +302,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

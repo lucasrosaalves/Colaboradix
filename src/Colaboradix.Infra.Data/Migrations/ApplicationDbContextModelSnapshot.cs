@@ -38,7 +38,7 @@ namespace Colaboradix.Infra.Data.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("Cycles");
+                    b.ToTable("cycles");
                 });
 
             modelBuilder.Entity("Colaboradix.Domain.Entities.Feedback", b =>
@@ -50,9 +50,6 @@ namespace Colaboradix.Infra.Data.Migrations
                     b.Property<Guid>("CycleId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("FromId")
-                        .HasColumnType("uuid");
-
                     b.Property<string>("Message")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -62,18 +59,21 @@ namespace Colaboradix.Infra.Data.Migrations
                         .HasMaxLength(3)
                         .HasColumnType("smallint");
 
-                    b.Property<Guid>("ToId")
+                    b.Property<Guid>("ReceiverId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SenderId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CycleId");
 
-                    b.HasIndex("FromId");
+                    b.HasIndex("ReceiverId");
 
-                    b.HasIndex("ToId");
+                    b.HasIndex("SenderId");
 
-                    b.ToTable("Feedbacks");
+                    b.ToTable("feedbacks");
                 });
 
             modelBuilder.Entity("Colaboradix.Domain.Entities.Member", b =>
@@ -87,10 +87,15 @@ namespace Colaboradix.Infra.Data.Migrations
                         .HasColumnType("boolean")
                         .HasDefaultValue(false);
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<Guid?>("TeamId")
                         .HasColumnType("uuid");
@@ -105,7 +110,7 @@ namespace Colaboradix.Infra.Data.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("Members");
+                    b.ToTable("members");
                 });
 
             modelBuilder.Entity("Colaboradix.Domain.Entities.Team", b =>
@@ -120,13 +125,8 @@ namespace Colaboradix.Infra.Data.Migrations
                         .HasDefaultValue(false);
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("MemberAdminId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("MemberAdminId1")
-                        .HasColumnType("uuid");
+                        .HasMaxLength(220)
+                        .HasColumnType("character varying(220)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -135,15 +135,13 @@ namespace Colaboradix.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MemberAdminId1");
-
-                    b.ToTable("Teams");
+                    b.ToTable("teams");
                 });
 
             modelBuilder.Entity("Colaboradix.Domain.Entities.Cycle", b =>
                 {
                     b.HasOne("Colaboradix.Domain.Entities.Team", "Team")
-                        .WithMany()
+                        .WithMany("Cycles")
                         .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -154,28 +152,28 @@ namespace Colaboradix.Infra.Data.Migrations
             modelBuilder.Entity("Colaboradix.Domain.Entities.Feedback", b =>
                 {
                     b.HasOne("Colaboradix.Domain.Entities.Cycle", "Cycle")
-                        .WithMany()
+                        .WithMany("Feedbacks")
                         .HasForeignKey("CycleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Colaboradix.Domain.Entities.Member", "From")
-                        .WithMany()
-                        .HasForeignKey("FromId")
+                    b.HasOne("Colaboradix.Domain.Entities.Member", "Receiver")
+                        .WithMany("ReceivedFeedbacks")
+                        .HasForeignKey("ReceiverId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Colaboradix.Domain.Entities.Member", "To")
-                        .WithMany()
-                        .HasForeignKey("ToId")
+                    b.HasOne("Colaboradix.Domain.Entities.Member", "Sender")
+                        .WithMany("SubmittedFeedbacks")
+                        .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cycle");
 
-                    b.Navigation("From");
+                    b.Navigation("Receiver");
 
-                    b.Navigation("To");
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("Colaboradix.Domain.Entities.Member", b =>
@@ -187,17 +185,22 @@ namespace Colaboradix.Infra.Data.Migrations
                     b.Navigation("Team");
                 });
 
-            modelBuilder.Entity("Colaboradix.Domain.Entities.Team", b =>
+            modelBuilder.Entity("Colaboradix.Domain.Entities.Cycle", b =>
                 {
-                    b.HasOne("Colaboradix.Domain.Entities.Member", "MemberAdmin")
-                        .WithMany()
-                        .HasForeignKey("MemberAdminId1");
+                    b.Navigation("Feedbacks");
+                });
 
-                    b.Navigation("MemberAdmin");
+            modelBuilder.Entity("Colaboradix.Domain.Entities.Member", b =>
+                {
+                    b.Navigation("ReceivedFeedbacks");
+
+                    b.Navigation("SubmittedFeedbacks");
                 });
 
             modelBuilder.Entity("Colaboradix.Domain.Entities.Team", b =>
                 {
+                    b.Navigation("Cycles");
+
                     b.Navigation("Members");
                 });
 #pragma warning restore 612, 618

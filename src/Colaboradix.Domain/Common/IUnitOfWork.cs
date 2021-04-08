@@ -1,11 +1,9 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 
 namespace Colaboradix.Domain.Common
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork
     {
-        void BeginTransaction();
-        void Commit();
-        void Rollback();
+        Task<int> CommitAsync();
     }
 }

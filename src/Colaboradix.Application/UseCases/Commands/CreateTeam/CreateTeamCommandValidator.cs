@@ -2,11 +2,13 @@
 
 namespace Colaboradix.Application.UseCases.Commands.CreateTeam
 {
-    internal class CreateTeamCommandValidator : AbstractValidator<CreateTeamCommand>
+    public class CreateTeamCommandValidator : AbstractValidator<CreateTeamCommand>
     {
         public CreateTeamCommandValidator()
         {
-
+            RuleFor(c => c.Name)
+                .NotEmpty()
+                .WithMessage("Name must be informed");
         }
     }
 }

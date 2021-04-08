@@ -1,35 +1,22 @@
 ﻿using Colaboradix.Domain.Common;
 using System;
+using System.Threading.Tasks;
 
 namespace Colaboradix.Infra.Data.Context
 {
     internal class UnitOfWork : IUnitOfWork
     {
-        private readonly DbSession _session;
+        private readonly ApplicationDbContext _dbContext;
 
-        public UnitOfWork(DbSession session)
+        public UnitOfWork(ApplicationDbContext dbContext)
         {
-            _session = session
-                ?? throw new ArgumentNullException(nameof(session));
+            _dbContext = dbContext
+                ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public void BeginTransaction()
+        public Task<int> CommitAsync()
         {
-            _session.Transaction = _session.Connection.BeginTransaction();
+            return _dbContext.SaveChangesAsync();
         }
-
-        public void Commit()
-        {
-            _session.Transaction.Commit();
-            Dispose();
-        }
-
-        public void Rollback()
-        {
-            _session.Transaction.Rollback();
-            Dispose();
-        }
-
-        public void Dispose() => _session.Transaction?.Dispose();
     }
 }

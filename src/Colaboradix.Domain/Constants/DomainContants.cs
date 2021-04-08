@@ -1,10 +1,7 @@
-﻿using System;
-namespace Colaboradix.Domain.Constants
+﻿namespace Colaboradix.Domain.Constants
 {
-    public class DomainContants
+    public static class DomainContants
     {
-        public DomainContants()
-        {
-        }
+        public const byte MaxQuantityByFeedback = 3;
     }
 }

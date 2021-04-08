@@ -8,7 +8,7 @@ namespace Colaboradix.Infra.Data.Configurations.EntityTypes
     {
         public void Configure(EntityTypeBuilder<Cycle> builder)
         {
-            builder.ToTable("Cycles");
+            builder.ToTable("cycles");
 
             builder.HasKey(b => b.Id);
 

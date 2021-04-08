@@ -1,0 +1,82 @@
+﻿<Properties StartupConfiguration="{C0F88A73-0B49-407A-A4CD-CBF27AED7F55}|Default">
+  <MonoDevelop.Ide.ItemProperties.src.1_220-_220Presentation.Colaboradix.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Colaboradix.Infra.Data/Configurations/EntityTypes/MemberEntityTypeConfiguration.cs">
+    <Files>
+      <File FileName="src/Colaboradix.Domain/Common/ISqlSession.cs" Line="3" Column="39" />
+      <File FileName="src/Colaboradix.Domain/Common/IEntity.cs" Line="3" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Common/IRepository.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Common/IUnitOfWork.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Infra.Data/Factories/SqlConnectionFactory.cs" Line="20" Column="25" />
+      <File FileName="src/Colaboradix.Infra.Data/Context/ApplicationDbContext.cs" Line="23" Column="97" />
+      <File FileName="src/Colaboradix.Infra.Data/IoC/DependencyInjection.cs" Line="27" Column="1" />
+      <File FileName="src/Colaboradix.Infra.Data/Repositories/Repository.cs" Line="5" Column="46" />
+      <File FileName="src/Colaboradix.Infra.Data/Repositories/TeamRepository.cs" Line="3" Column="39" />
+      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/GetActiveTeamsQuery.cs" Line="6" Column="59" />
+      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/GetActiveTeamsQueryHandler.cs" Line="25" Column="35" />
+      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/ActiveTeamsDto.cs" Line="10" Column="6" />
+      <File FileName="src/Colaboradix.Application/Common/UseCases/ICommand.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Application/Common/UseCases/ICommandHandler.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Application/Common/UseCases/IQueryHandler.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Application/Common/UseCases/IQuery.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.API/Controllers/ApiControllerBase.cs" Line="18" Column="42" />
+      <File FileName="src/Colaboradix.API/Controllers/TeamsController.cs" Line="18" Column="40" />
+      <File FileName="src/Colaboradix.API/Program.cs" Line="10" Column="1" />
+      <File FileName="src/Colaboradix.API/Middlewares/ExceptionHandlerMiddleware.cs" Line="34" Column="1" />
+      <File FileName="src/Colaboradix.Infra.Data/Configurations/EntityTypes/CycleEntityTypeConfiguration.cs" Line="11" Column="31" />
+      <File FileName="src/Colaboradix.Infra.Data/Configurations/EntityTypes/FeedbackEntityTypeConfiguration.cs" Line="12" Column="31" />
+      <File FileName="src/Colaboradix.Infra.Data/Configurations/EntityTypes/MemberEntityTypeConfiguration.cs" Line="12" Column="31" />
+      <File FileName="src/Colaboradix.Infra.Data/Configurations/EntityTypes/TeamEntityTypeConfiguration.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Colaboradix" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="1 - Presentation" expanded="True">
+                <Node name="Colaboradix.API" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Middlewares" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="2 - Application" expanded="True">
+                <Node name="Colaboradix.Application" expanded="True">
+                  <Node name="Common" expanded="True">
+                    <Node name="UseCases" expanded="True" />
+                  </Node>
+                  <Node name="IoC" expanded="True" />
+                  <Node name="UseCases" expanded="True">
+                    <Node name="Queries" expanded="True">
+                      <Node name="GetActiveTeams" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="3 - Domain" expanded="True">
+                <Node name="Colaboradix.Domain" expanded="True">
+                  <Node name="Common" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="4 - Infra" expanded="True">
+                <Node name="Colaboradix.Infra.Data" expanded="True">
+                  <Node name="Configurations" expanded="True">
+                    <Node name="EntityTypes" expanded="True">
+                      <Node name="MemberEntityTypeConfiguration.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.API/Middlewares/ExceptionHandlerMiddleware.cs" relfile="src/Colaboradix.API/Middlewares/ExceptionHandlerMiddleware.cs" line="34" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

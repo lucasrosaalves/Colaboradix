@@ -1,21 +1,42 @@
 ﻿using Colaboradix.Domain.Common;
+using Colaboradix.Domain.Enumerations;
 using System;
+using System.Collections.Generic;
 
 namespace Colaboradix.Domain.Entities
 {
-    public class User : IEntity
+    public class Member : IEntity
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public int Type { get; set; }
-        public bool Active { get; set; }
+        private List<Feedback> _receivedFeedbacks;
+        private List<Feedback> _submittedFeedbacks;
 
-        public Guid? ProjectId { get; set; }
-        public Project Project { get; set; }
+        public Guid Id { get; private set; }
+        public string Name { get; private set; }
+        public string Email { get; private set; }
+        public MemberType Type { get; private set; }
+        public bool Active { get; private set; }
 
-        public Guid? TeamId { get; set; }
-        public Team Team { get; set; }
+        public Guid? TeamId { get; private set; }
+        public Team Team { get; private set; }
+
+        public IReadOnlyList<Feedback> ReceivedFeedbacks => _receivedFeedbacks;
+        public IReadOnlyList<Feedback> SubmittedFeedbacks => _submittedFeedbacks;
+
+        public Member(string name, string email, MemberType type, Guid? teamId = null)
+        {
+            Id = Guid.NewGuid();
+            Name = name;
+            Email = email;
+            Type = type;
+            TeamId = teamId;
+            Active = true;
+            _receivedFeedbacks = new();
+            _submittedFeedbacks = new();
+        }
+
+        protected Member()
+        {
+
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Colaboradix.Domain.Common
+namespace Colaboradix.Application.Common.Interfaces
 {
     public interface IUnitOfWork
     {

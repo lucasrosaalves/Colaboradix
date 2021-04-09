@@ -17,10 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Commands\CreateTeam\" />
     <Folder Include="Common\Behaviours\" />
     <Folder Include="Common\Exceptions\" />
-    <Folder Include="UseCases\Queries\" />
-    <Folder Include="UseCases\Queries\GetActiveTeams\" />
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="Common\Commands\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Commands\UpdateTeam\" />
   </ItemGroup>
 </Project>

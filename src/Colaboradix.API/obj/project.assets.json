@@ -442,7 +442,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Colaboradix.Domain": "1.0.0",
+          "Colaboradix.Application": "1.0.0",
           "Dapper": "2.0.78",
           "EFCore.NamingConventions": "5.0.2",
           "Microsoft.EntityFrameworkCore": "5.0.5",
@@ -1266,7 +1266,7 @@
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
+        "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

@@ -15,7 +15,6 @@ namespace Colaboradix.Domain.Enumerations
 
         protected MemberType() { }
 
-
         public static MemberType FromId(byte id)
         {
             switch (id)

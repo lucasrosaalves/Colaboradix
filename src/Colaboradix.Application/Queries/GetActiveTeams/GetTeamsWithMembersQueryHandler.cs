@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Colaboradix.Application.Common.UseCases;
+using Colaboradix.Application.Common.Interfaces;
+using Colaboradix.Application.Common.Queries;
 
-namespace Colaboradix.Application.UseCases.Queries.GetActiveTeams
+namespace Colaboradix.Application.Queries.GetActiveTeams
 {
     public class GetTeamsWithMembersQueryHandler : IQueryHandler<GetTeamsWithMembersQuery, IEnumerable<TeamWithMembersDto>>
     {
@@ -17,7 +18,6 @@ namespace Colaboradix.Application.UseCases.Queries.GetActiveTeams
 
         public async Task<IEnumerable<TeamWithMembersDto>> Handle(GetTeamsWithMembersQuery request, CancellationToken cancellationToken)
         {
-
             string query = @"
                     SELECT
                         *

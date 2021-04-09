@@ -4,8 +4,9 @@ using System.Data;
 using Npgsql;
 using Dapper;
 using System.Threading.Tasks;
+using Colaboradix.Application.Common.Interfaces;
 
-namespace Colaboradix.Infra.Data.Domain.Common
+namespace Colaboradix.Infra.DataAccess
 {
     internal class SqlQueryService : ISqlQueryService, IDisposable
     {

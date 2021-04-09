@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Colaboradix.Application.UseCases.Commands.CreateTeam
+namespace Colaboradix.Application.Commands.CreateTeam
 {
     public class CreateTeamCommandValidator : AbstractValidator<CreateTeamCommand>
     {

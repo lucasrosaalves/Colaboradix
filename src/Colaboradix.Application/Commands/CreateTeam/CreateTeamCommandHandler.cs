@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Colaboradix.Application.Common.Interfaces;
 using Colaboradix.Application.Common.Models;
-using Colaboradix.Application.Common.UseCases;
-using Colaboradix.Domain.Common;
+using Colaboradix.Application.Common.Commands;
 using Colaboradix.Domain.Entities;
 using Colaboradix.Domain.Repositories;
 
-namespace Colaboradix.Application.UseCases.Commands.CreateTeam
+namespace Colaboradix.Application.Commands.CreateTeam
 {
     public class CreateTeamCommandHandler : ICommandHandler<CreateTeamCommand>
     {
@@ -22,7 +22,7 @@ namespace Colaboradix.Application.UseCases.Commands.CreateTeam
 
         public async Task<ApplicationResponse> Handle(CreateTeamCommand request, CancellationToken cancellationToken)
         {
-            if (_teamRepository.ExistsByName(request.Name))
+            if (await _teamRepository.ExistsByNameAsync(request.Name))
             {
                 return ApplicationResponse.Failure("This name is already in use");
             }

@@ -1,20 +1,47 @@
 ﻿<Properties StartupConfiguration="{C0F88A73-0B49-407A-A4CD-CBF27AED7F55}|Default">
   <MonoDevelop.Ide.ItemProperties.src.1_220-_220Presentation.Colaboradix.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/TeamWithMembersDto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Colaboradix.Domain/Entities/Member.cs">
     <Files>
-      <File FileName="src/Colaboradix.Infra/Data/Configurations/MemberEntityTypeConfiguration.cs" Line="6" Column="48" />
-      <File FileName="src/Colaboradix.Infra/Data/Configurations/TeamEntityTypeConfiguration.cs" />
-      <File FileName="src/Colaboradix.Infra/Data/ApplicationDbContext.cs" />
-      <File FileName="src/Colaboradix.Infra/Data/Configurations/CycleEntityTypeConfiguration.cs" />
-      <File FileName="src/Colaboradix.Infra/Domain/Common/Repository.cs" />
-      <File FileName="src/Colaboradix.Infra/Domain/Common/SqlQueryService.cs" />
-      <File FileName="src/Colaboradix.Infra/Domain/Common/UnitOfWork.cs" />
-      <File FileName="src/Colaboradix.Infra/Domain/Repositories/TeamRepository.cs" />
-      <File FileName="src/Colaboradix.Infra/DependencyInjection.cs" Line="2" Column="39" />
-      <File FileName="src/Colaboradix.API/Program.cs" Line="10" Column="1" />
-      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/GetTeamsWithMembersQuery.cs" Line="1" Column="1" />
-      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/GetTeamsWithMembersQueryHandler.cs" Line="1" Column="1" />
-      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/TeamWithMembersDto.cs" Line="11" Column="62" />
+      <File FileName="src/Colaboradix.Application/Common/Interfaces/ISqlQueryService.cs" Line="13" Column="1" />
+      <File FileName="src/Colaboradix.Application/Common/Interfaces/IUnitOfWork.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Enumerations/MemberType.cs" Line="17" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Constants/DomainContants.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Common/IRepository.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/GetTeamsWithMembersQueryHandler.cs" Line="20" Column="10" />
+      <File FileName="src/Colaboradix.Application/UseCases/Commands/CreateTeam/CreateTeamCommandHandler.cs" Line="25" Column="23" />
+      <File FileName="src/Colaboradix.Infra/Domain/Common/SqlQueryService.cs" Line="9" Column="1" />
+      <File FileName="src/Colaboradix.Infra/Domain/Common/UnitOfWork.cs" Line="6" Column="2" />
+      <File FileName="src/Colaboradix.Infra/Data/ApplicationDbContext.cs" Line="4" Column="1" />
+      <File FileName="src/Colaboradix.Infra/DependencyInjection.cs" Line="5" Column="37" />
+      <File FileName="src/Colaboradix.Infra/Domain/Repositories/TeamRepository.cs" Line="25" Column="22" />
+      <File FileName="src/Colaboradix.Infra/Colaboradix.Infra.csproj" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/GetTeamsWithMembersQuery.cs" Line="4" Column="34" />
+      <File FileName="src/Colaboradix.Application/UseCases/Queries/GetActiveTeams/TeamWithMembersDto.cs" Line="4" Column="34" />
+      <File FileName="src/Colaboradix.Application/UseCases/Commands/CreateTeam/CreateTeamCommand.cs" Line="5" Column="1" />
+      <File FileName="src/Colaboradix.Application/UseCases/Commands/CreateTeam/CreateTeamCommandValidator.cs" Line="5" Column="1" />
+      <File FileName="src/Colaboradix.Infra/DataAccess/Configurations/CycleEntityTypeConfiguration.cs" Line="5" Column="28" />
+      <File FileName="src/Colaboradix.Infra/DataAccess/Configurations/FeedbackEntityTypeConfiguration.cs" Line="6" Column="28" />
+      <File FileName="src/Colaboradix.Infra/DataAccess/Configurations/MemberEntityTypeConfiguration.cs" Line="6" Column="28" />
+      <File FileName="src/Colaboradix.Infra/DataAccess/Configurations/TeamEntityTypeConfiguration.cs" Line="5" Column="28" />
+      <File FileName="src/Colaboradix.Application/Common/Queries/IQuery.cs" Line="3" Column="49" />
+      <File FileName="src/Colaboradix.Application/Common/Queries/IQueryHandler.cs" Line="3" Column="49" />
+      <File FileName="src/Colaboradix.Application/Common/Commands/ICommand.cs" Line="8" Column="6" />
+      <File FileName="src/Colaboradix.Application/Common/Commands/ICommandHandler.cs" Line="4" Column="50" />
+      <File FileName="src/Colaboradix.API/Controllers/ApiControllerBase.cs" Line="34" Column="14" />
+      <File FileName="src/Colaboradix.API/Middlewares/ExceptionHandlerMiddleware.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.API/Controllers/TeamsController.cs" Line="9" Column="38" />
+      <File FileName="src/Colaboradix.Application/Commands/UpdateTeam/UpdateTeamCommand.cs" Line="6" Column="90" />
+      <File FileName="src/Colaboradix.Application/Commands/UpdateTeam/UpdateTeamCommandHandler.cs" Line="39" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Repositories/ITeamRepository.cs" Line="11" Column="51" />
+      <File FileName="src/Colaboradix.Domain/Entities/Member.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Entities/Team.cs" Line="39" Column="19" />
+      <File FileName="src/Colaboradix.Application/Common/Exceptions/ApplicationException.cs" Line="9" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Exceptions/DomainException.cs" Line="6" Column="62" />
+      <File FileName="src/Colaboradix.Application/Commands/UpdateTeam/UpdateTeamCommandValidator.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Application/Common/Models/ApplicationResponse.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.API/Attributes/CommandProducesResponseTypeAttribute.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Entities/Cycle.cs" Line="1" Column="1" />
+      <File FileName="src/Colaboradix.Domain/Entities/Feedback.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,37 +50,28 @@
             <Node name="src" expanded="True">
               <Node name="1 - Presentation" expanded="True">
                 <Node name="Colaboradix.API" expanded="True">
-                  <Node name="Dependencies" expanded="True" />
+                  <Node name="Attributes" expanded="True" />
+                  <Node name="Controllers" expanded="True" />
                 </Node>
               </Node>
               <Node name="2 - Application" expanded="True">
                 <Node name="Colaboradix.Application" expanded="True">
-                  <Node name="UseCases" expanded="True">
-                    <Node name="Queries" expanded="True">
-                      <Node name="GetActiveTeams" expanded="True">
-                        <Node name="TeamWithMembersDto.cs" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
+                  <Node name="Commands" expanded="True" />
                 </Node>
               </Node>
               <Node name="3 - Domain" expanded="True">
                 <Node name="Colaboradix.Domain" expanded="True">
-                  <Node name="Enumerations" expanded="True" />
+                  <Node name="Exceptions" expanded="True" />
+                  <Node name="Repositories" expanded="True" />
                 </Node>
               </Node>
               <Node name="4 - Infra" expanded="True">
                 <Node name="Colaboradix.Infra" expanded="True">
-                  <Node name="Data" expanded="True" />
+                  <Node name="Configurations" expanded="True" />
                 </Node>
               </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Colaboradix" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

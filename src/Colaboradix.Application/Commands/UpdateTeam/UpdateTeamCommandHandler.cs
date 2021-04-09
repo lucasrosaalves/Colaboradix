@@ -19,9 +19,29 @@ namespace Colaboradix.Application.Commands.UpdateTeam
             _teamRepository = teamRepository ?? throw new ArgumentNullException(nameof(teamRepository));
         }
 
-        public Task<ApplicationResponse> Handle(UpdateTeamCommand request, CancellationToken cancellationToken)
+        public async Task<ApplicationResponse> Handle(UpdateTeamCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var team = await _teamRepository.GetByIdAsync(request.Id);
+
+            if(team is null)
+            {
+                return ApplicationResponse.Failure($"Team does not exist. Id {request.Id}");
+            }
+
+            if (await _teamRepository.ExistsBySameNameAndDifferentIdAsync(request.Name, request.Id))
+            {
+                return ApplicationResponse.Failure("This name is already in use");
+            }
+
+            team.SetName(request.Name);
+            team.SetDescription(request.Description);
+            team.SetActive(request.Active);
+
+            _teamRepository.Update(team);
+
+            await _unitOfWork.CommitAsync();
+
+            return ApplicationResponse.Success();
         }
     }
 }

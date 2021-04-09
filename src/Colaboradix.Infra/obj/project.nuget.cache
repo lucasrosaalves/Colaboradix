@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "woZvh2Brjvh9ujn+CsfCWsyDxt5/e5gnnQAwfCPasbpvoQ13JD72mHk+eYxIf+U9igJo5a+QssYQx9rNCWSciw==",
+  "dgSpecHash": "eSbjt+DHk9jbE38dDqaEZGZEpUeuSBXf5I0nuJLkv8vjBxUoipr5PJTwtlOIhngI6jTzJzx8VTL33yz5hGYY9Q==",
   "success": true,
   "projectFilePath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Infra/Colaboradix.Infra.csproj",
   "expectedPackageFiles": [
     "/Users/lucasrosaalves/.nuget/packages/dapper/2.0.78/dapper.2.0.78.nupkg.sha512",
     "/Users/lucasrosaalves/.nuget/packages/efcore.namingconventions/5.0.2/efcore.namingconventions.5.0.2.nupkg.sha512",
+    "/Users/lucasrosaalves/.nuget/packages/fluentvalidation/10.0.0/fluentvalidation.10.0.0.nupkg.sha512",
+    "/Users/lucasrosaalves/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.0.0/fluentvalidation.dependencyinjectionextensions.10.0.0.nupkg.sha512",
+    "/Users/lucasrosaalves/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
+    "/Users/lucasrosaalves/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "/Users/lucasrosaalves/.nuget/packages/microsoft.entityframeworkcore/5.0.5/microsoft.entityframeworkcore.5.0.5.nupkg.sha512",
     "/Users/lucasrosaalves/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.5/microsoft.entityframeworkcore.abstractions.5.0.5.nupkg.sha512",
     "/Users/lucasrosaalves/.nuget/packages/microsoft.entityframeworkcore.analyzers/5.0.5/microsoft.entityframeworkcore.analyzers.5.0.5.nupkg.sha512",

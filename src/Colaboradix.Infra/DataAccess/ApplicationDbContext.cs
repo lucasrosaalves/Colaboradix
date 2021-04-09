@@ -1,7 +1,7 @@
 ﻿using Colaboradix.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Colaboradix.Infra.Data
+namespace Colaboradix.Infra.DataAccess
 {
     internal class ApplicationDbContext : DbContext
     {

@@ -1,4 +1,5 @@
 ﻿using Colaboradix.Domain.Common;
+using Colaboradix.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 
@@ -17,6 +18,26 @@ namespace Colaboradix.Domain.Entities
         public IReadOnlyList<Member> Members => _members;
         public IReadOnlyList<Cycle> Cycles => _cycles;
 
+
+        public void SetName(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new DomainException("Name can not be null or empty");
+            }
+
+            Name = name;
+        }
+
+        public void SetDescription(string description)
+        {
+            Description = description;
+        }
+
+        public void SetActive(bool active)
+        {
+            Active = active;
+        }
 
         public Team(string name, string description)
         {

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Colaboradix.Domain.Common;
 using Colaboradix.Domain.Entities;
 
@@ -6,7 +7,10 @@ namespace Colaboradix.Domain.Repositories
 {
     public interface ITeamRepository : IRepository<Team>
     {
-        public Task AddAsync(Team team);
-        public bool ExistsByName(string name);
+        Task<Team> GetByIdAsync(Guid id);
+        Task<bool> ExistsByNameAsync(string name);
+        Task<bool> ExistsBySameNameAndDifferentIdAsync(string name, Guid id);
+        Task AddAsync(Team team);
+        void Update(Team team);
     }
 }

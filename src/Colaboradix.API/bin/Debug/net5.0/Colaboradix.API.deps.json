@@ -677,7 +677,7 @@
       },
       "Colaboradix.Infra/1.0.0": {
         "dependencies": {
-          "Colaboradix.Domain": "1.0.0",
+          "Colaboradix.Application": "1.0.0",
           "Dapper": "2.0.78",
           "EFCore.NamingConventions": "5.0.2",
           "Microsoft.EntityFrameworkCore": "5.0.5",

@@ -1,26 +1,45 @@
-﻿using System.Linq;
+﻿using System;
 using System.Threading.Tasks;
 using Colaboradix.Domain.Entities;
 using Colaboradix.Domain.Repositories;
-using Colaboradix.Infra.Data.Domain.Common;
+using Colaboradix.Infra.DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace Colaboradix.Infra.Data.Domain.Repositories
 {
-    internal class TeamRepository : Repository<Team>, ITeamRepository
+    internal class TeamRepository : ITeamRepository
     {
+        private readonly ApplicationDbContext _applicationDbContext;
+
         public TeamRepository(ApplicationDbContext applicationDbContext)
-            :base (applicationDbContext)
         {
+            _applicationDbContext = applicationDbContext
+                ?? throw new ArgumentNullException(nameof(applicationDbContext));
+        }
+
+        public async Task<Team> GetByIdAsync(Guid id)
+        {
+            return await _applicationDbContext.Teams.FirstOrDefaultAsync(t => t.Id == id);
+        }
+
+        public async Task<bool> ExistsByNameAsync(string name)
+        {
+            return await _applicationDbContext.Teams.AnyAsync(t => t.Name == name);
+        }
+
+        public async Task<bool> ExistsBySameNameAndDifferentIdAsync(string name, Guid id)
+        {
+            return await _applicationDbContext.Teams.AnyAsync(t => t.Name == name && t.Id != id);
         }
 
         public async Task AddAsync(Team team)
         {
-            await ApplicationDbContext.Teams.AddAsync(team);
+            await _applicationDbContext.Teams.AddAsync(team);
         }
 
-        public bool ExistsByName(string name)
+        public void Update(Team team)
         {
-            return ApplicationDbContext.Teams.Any(t => t.Name == name);
+            _applicationDbContext.Teams.Update(team);
         }
     }
 }

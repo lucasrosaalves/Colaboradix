@@ -21,4 +21,3 @@ C:/Projetos/Pessoal/Colaboradix/src/Colaboradix.Domain/obj/Debug/net5.0/Colabora
 /Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/obj/Debug/net5.0/Colaboradix.Domain.dll
 /Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/obj/Debug/net5.0/ref/Colaboradix.Domain.dll
 /Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/obj/Debug/net5.0/Colaboradix.Domain.pdb
-/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/obj/Debug/net5.0/Colaboradix.Domain.csprojAssemblyReference.cache

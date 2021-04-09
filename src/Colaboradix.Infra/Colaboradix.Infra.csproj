@@ -16,14 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Colaboradix.Domain\Colaboradix.Domain.csproj" />
+    <ProjectReference Include="..\Colaboradix.Application\Colaboradix.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Domain\" />
-    <Folder Include="Domain\Repositories\" />
-    <Folder Include="Domain\Common\" />
-    <Folder Include="Data\" />
-    <Folder Include="Data\Configurations\" />
+    <Folder Include="DataAccess\" />
+    <Folder Include="Configurations\" />
   </ItemGroup>
 </Project>

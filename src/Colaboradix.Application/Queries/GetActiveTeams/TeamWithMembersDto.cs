@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Colaboradix.Application.UseCases.Queries.GetActiveTeams
+namespace Colaboradix.Application.Queries.GetActiveTeams
 {
     public class TeamWithMembersDto
     {

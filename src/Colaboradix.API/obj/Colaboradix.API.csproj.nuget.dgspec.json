@@ -17,7 +17,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -94,7 +94,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -175,7 +175,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -230,7 +230,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
+          "/Users/lucasrosaalves/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -242,8 +242,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj": {
-                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Domain/Colaboradix.Domain.csproj"
+              "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj": {
+                "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/src/Colaboradix.Application/Colaboradix.Application.csproj"
               }
             }
           }

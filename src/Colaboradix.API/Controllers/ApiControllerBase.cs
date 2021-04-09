@@ -1,4 +1,5 @@
-﻿using Colaboradix.Application.Common.UseCases;
+﻿using Colaboradix.Application.Common.Commands;
+using Colaboradix.Application.Common.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,8 +15,7 @@ namespace Colaboradix.API.Controllers
         private ISender _mediator;
         protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetService<ISender>();
 
-
-        protected async Task<ActionResult> QueryAsync<T>(IQuery<T> query, CancellationToken cancellationToken = default)
+        protected async Task<IActionResult> QueryAsync<T>(IQuery<T> query, CancellationToken cancellationToken = default)
         {
             if(query is null) { return BadRequest(); }
 

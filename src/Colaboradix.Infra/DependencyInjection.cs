@@ -1,7 +1,7 @@
-﻿using Colaboradix.Domain.Common;
+﻿using Colaboradix.Application.Common.Interfaces;
 using Colaboradix.Domain.Repositories;
-using Colaboradix.Infra.Data.Domain.Common;
 using Colaboradix.Infra.Data.Domain.Repositories;
+using Colaboradix.Infra.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +19,7 @@ namespace Colaboradix.Infra.Data
                 options.UseNpgsql(connectionString);
             });
 
-            services.AddScoped<ISqlQueryService, SqlQueryService>(s =>
+            services.AddTransient<ISqlQueryService, SqlQueryService>(s =>
             {
                 return new SqlQueryService(connectionString);
             });

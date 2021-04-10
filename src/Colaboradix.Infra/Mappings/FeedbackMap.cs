@@ -3,9 +3,9 @@ using Colaboradix.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Configurations
+namespace Colaboradix.Infra.Mappings
 {
-    internal class FeedbackEntityTypeConfiguration : IEntityTypeConfiguration<Feedback>
+    internal class FeedbackMap : IEntityTypeConfiguration<Feedback>
     {
         public void Configure(EntityTypeBuilder<Feedback> builder)
         {

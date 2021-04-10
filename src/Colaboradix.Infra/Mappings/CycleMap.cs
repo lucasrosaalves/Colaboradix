@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Configurations
+namespace Colaboradix.Infra.Mappings
 {
-    internal class CycleEntityTypeConfiguration : IEntityTypeConfiguration<Cycle>
+    internal class CycleMap : IEntityTypeConfiguration<Cycle>
     {
         public void Configure(EntityTypeBuilder<Cycle> builder)
         {

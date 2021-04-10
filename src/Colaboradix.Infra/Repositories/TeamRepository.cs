@@ -2,10 +2,10 @@
 using System.Threading.Tasks;
 using Colaboradix.Domain.Entities;
 using Colaboradix.Domain.Repositories;
-using Colaboradix.Infra.DataAccess;
+using Colaboradix.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace Colaboradix.Infra.Data.Domain.Repositories
+namespace Colaboradix.Infra.Repositories
 {
     internal class TeamRepository : ITeamRepository
     {

@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Configurations
+namespace Colaboradix.Infra.Mappings
 {
-    internal class TeamEntityTypeConfiguration : IEntityTypeConfiguration<Team>
+    internal class TeamMap : IEntityTypeConfiguration<Team>
     {
         public void Configure(EntityTypeBuilder<Team> builder)
         {

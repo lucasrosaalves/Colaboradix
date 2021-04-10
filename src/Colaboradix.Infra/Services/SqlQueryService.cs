@@ -6,7 +6,7 @@ using Dapper;
 using System.Threading.Tasks;
 using Colaboradix.Application.Common.Interfaces;
 
-namespace Colaboradix.Infra.DataAccess
+namespace Colaboradix.Infra.Services
 {
     internal class SqlQueryService : ISqlQueryService, IDisposable
     {

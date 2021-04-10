@@ -1,8 +1,9 @@
 ﻿using Colaboradix.Application.Common.Interfaces;
+using Colaboradix.Infra.Context;
 using System;
 using System.Threading.Tasks;
 
-namespace Colaboradix.Infra.DataAccess
+namespace Colaboradix.Infra.Services
 {
     internal class UnitOfWork : IUnitOfWork
     {

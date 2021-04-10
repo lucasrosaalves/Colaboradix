@@ -20,8 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\" />
-    <Folder Include="DataAccess\" />
-    <Folder Include="Configurations\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Context\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

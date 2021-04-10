@@ -3,9 +3,9 @@ using Colaboradix.Domain.Enumerations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Colaboradix.Infra.Configurations
+namespace Colaboradix.Infra.Mappings
 {
-    internal class MemberEntityTypeConfiguration : IEntityTypeConfiguration<Member>
+    internal class MemberMap : IEntityTypeConfiguration<Member>
     {
         public void Configure(EntityTypeBuilder<Member> builder)
         {

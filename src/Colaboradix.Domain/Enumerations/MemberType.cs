@@ -4,8 +4,8 @@ namespace Colaboradix.Domain.Enumerations
 {
     public class MemberType
     {
-        public static MemberType Admin = new MemberType(1, "Admin");
-        public static MemberType Regular = new MemberType(2, "Regular");
+        public static MemberType Admin = new(1, "Admin");
+        public static MemberType Regular = new(2, "Regular");
 
         public MemberType(byte id, string name)
         {

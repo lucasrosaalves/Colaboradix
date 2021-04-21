@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Colaboradix.Application.Common.Models;
 using FluentValidation;
 using MediatR;
 using ApplicationException = Colaboradix.Application.Common.Exceptions.ApplicationException;

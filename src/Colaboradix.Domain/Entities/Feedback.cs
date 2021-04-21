@@ -5,6 +5,8 @@ namespace Colaboradix.Domain.Entities
 {
     public class Feedback : IEntity
     {
+        public const byte MaxQuantity = 3;
+
         public Guid Id { get; private set; }
         public string Message { get; private set; }
         public byte Quantity { get; private set; }

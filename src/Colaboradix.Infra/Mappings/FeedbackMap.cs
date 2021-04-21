@@ -1,5 +1,4 @@
-﻿using Colaboradix.Domain.Constants;
-using Colaboradix.Domain.Entities;
+﻿using Colaboradix.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -20,7 +19,7 @@ namespace Colaboradix.Infra.Mappings
 
             builder
                 .Property(b => b.Quantity)
-                .HasMaxLength(DomainContants.MaxQuantityByFeedback)
+                .HasMaxLength(Feedback.MaxQuantity)
                 .IsRequired();
 
             builder.HasOne(b => b.Receiver);

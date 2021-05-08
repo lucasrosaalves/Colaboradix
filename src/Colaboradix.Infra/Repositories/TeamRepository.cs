@@ -41,5 +41,29 @@ namespace Colaboradix.Infra.Repositories
         {
             _applicationDbContext.Teams.Update(team);
         }
+
+        public async Task<bool> MemberExistsAsync(string email)
+        {
+            return await _applicationDbContext.Members.AnyAsync(member => member.Email == email);
+        }
+
+        public async Task<Member> GetMemberAsync(Guid memberId, Guid teamId)
+        {
+            return await _applicationDbContext.Members.FirstOrDefaultAsync(member => member.Id == memberId && member.TeamId == teamId);
+        }
+        public async Task<Member> GetMemberAsync(string email)
+        {
+            return await _applicationDbContext.Members.FirstOrDefaultAsync(member => member.Email == email);
+        }
+
+        public async Task AddMemberAsync(Member member)
+        {
+            await _applicationDbContext.Members.AddAsync(member);
+        }
+
+        public void UpdateMember(Member member)
+        {
+            _applicationDbContext.Members.Update(member);
+        }
     }
 }

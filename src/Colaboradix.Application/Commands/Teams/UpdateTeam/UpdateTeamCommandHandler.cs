@@ -6,7 +6,7 @@ using Colaboradix.Application.Common.Interfaces;
 using Colaboradix.Application.Common.Models;
 using Colaboradix.Domain.Repositories;
 
-namespace Colaboradix.Application.Commands.UpdateTeam
+namespace Colaboradix.Application.Commands.Teams.UpdateTeam
 {
     public class UpdateTeamCommandHandler : ICommandHandler<UpdateTeamCommand>
     {

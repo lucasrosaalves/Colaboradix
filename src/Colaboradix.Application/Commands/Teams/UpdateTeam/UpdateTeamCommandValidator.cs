@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Colaboradix.Application.Commands.UpdateTeam
+namespace Colaboradix.Application.Commands.Teams.UpdateTeam
 {
     public class UpdateTeamCommandValidator : AbstractValidator<UpdateTeamCommand>
     {

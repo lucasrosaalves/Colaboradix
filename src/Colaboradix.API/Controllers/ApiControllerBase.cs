@@ -19,7 +19,14 @@ namespace Colaboradix.API.Controllers
         {
             if(query is null) { return BadRequest(); }
 
-            return Ok(await Mediator.Send(query, cancellationToken));
+            try
+            {
+                return Ok(await Mediator.Send(query, cancellationToken));
+            }
+            catch
+            {
+                return NoContent();
+            }
         }
 
         protected async Task<IActionResult> CommandAsync(ICommand command, CancellationToken cancellationToken = default)

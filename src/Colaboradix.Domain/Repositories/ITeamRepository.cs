@@ -12,5 +12,10 @@ namespace Colaboradix.Domain.Repositories
         Task<bool> ExistsBySameNameAndDifferentIdAsync(string name, Guid id);
         Task AddAsync(Team team);
         void Update(Team team);
+        Task<bool> MemberExistsAsync(string email);
+        Task<Member> GetMemberAsync(Guid memberId, Guid teamId);
+        Task<Member> GetMemberAsync(string email);
+        Task AddMemberAsync(Member member);
+        void UpdateMember(Member member);
     }
 }

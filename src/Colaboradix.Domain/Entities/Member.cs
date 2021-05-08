@@ -16,13 +16,13 @@ namespace Colaboradix.Domain.Entities
         public MemberType Type { get; private set; }
         public bool Active { get; private set; }
 
-        public Guid? TeamId { get; private set; }
+        public Guid TeamId { get; private set; }
         public Team Team { get; private set; }
 
         public IReadOnlyList<Feedback> ReceivedFeedbacks => _receivedFeedbacks;
         public IReadOnlyList<Feedback> SubmittedFeedbacks => _submittedFeedbacks;
 
-        public Member(string name, string email, MemberType type, Guid? teamId = null)
+        public Member(string name, string email, MemberType type, Guid teamId)
         {
             Id = Guid.NewGuid();
             Name = name;
@@ -32,6 +32,15 @@ namespace Colaboradix.Domain.Entities
             Active = true;
             _receivedFeedbacks = new();
             _submittedFeedbacks = new();
+        }
+
+
+        public void Update(string name, byte typeId, bool active, Guid teamId)
+        {
+            Name = name;
+            Type = MemberType.FromId(typeId);
+            Active = active;
+            TeamId = teamId;
         }
 
         protected Member()

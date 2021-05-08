@@ -1,13 +1,13 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using Colaboradix.Application.Common.Commands;
 using Colaboradix.Application.Common.Interfaces;
 using Colaboradix.Application.Common.Models;
-using Colaboradix.Application.Common.Commands;
 using Colaboradix.Domain.Entities;
 using Colaboradix.Domain.Repositories;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
-namespace Colaboradix.Application.Commands.CreateTeam
+namespace Colaboradix.Application.Commands.Teams.CreateTeam
 {
     public class CreateTeamCommandHandler : ICommandHandler<CreateTeamCommand>
     {

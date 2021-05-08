@@ -21,8 +21,6 @@
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Common\Commands\" />
-    <Folder Include="Commands\" />
     <Folder Include="Queries\" />
-    <Folder Include="Commands\UpdateTeam\" />
   </ItemGroup>
 </Project>

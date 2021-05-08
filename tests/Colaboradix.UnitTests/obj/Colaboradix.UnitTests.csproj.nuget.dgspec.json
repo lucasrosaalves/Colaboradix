@@ -1,28 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lucasrosaalves/Projects/Colaboradix/tests/Colaboradix.UnitTests/Colaboradix.UnitTests.csproj": {}
+    "C:\\Projetos\\Pessoal\\Colaboradix\\tests\\Colaboradix.UnitTests\\Colaboradix.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/lucasrosaalves/Projects/Colaboradix/tests/Colaboradix.UnitTests/Colaboradix.UnitTests.csproj": {
+    "C:\\Projetos\\Pessoal\\Colaboradix\\tests\\Colaboradix.UnitTests\\Colaboradix.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lucasrosaalves/Projects/Colaboradix/tests/Colaboradix.UnitTests/Colaboradix.UnitTests.csproj",
+        "projectUniqueName": "C:\\Projetos\\Pessoal\\Colaboradix\\tests\\Colaboradix.UnitTests\\Colaboradix.UnitTests.csproj",
         "projectName": "Colaboradix.UnitTests",
-        "projectPath": "/Users/lucasrosaalves/Projects/Colaboradix/tests/Colaboradix.UnitTests/Colaboradix.UnitTests.csproj",
-        "packagesPath": "/Users/lucasrosaalves/.nuget/packages/",
-        "outputPath": "/Users/lucasrosaalves/Projects/Colaboradix/tests/Colaboradix.UnitTests/obj/",
+        "projectPath": "C:\\Projetos\\Pessoal\\Colaboradix\\tests\\Colaboradix.UnitTests\\Colaboradix.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\Pessoal\\Colaboradix\\tests\\Colaboradix.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "/Users/lucasrosaalves/.config/NuGet/NuGet.Config"
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
